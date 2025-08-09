@@ -1,4 +1,5 @@
 import os
+print("Welcome back, user!")
 
 if os.path.exists("tasks.txt"):
     with open("tasks.txt", "r") as file:
@@ -10,7 +11,8 @@ def show_menu():
     print("\n1. Add Task")
     print("2. View Tasks")
     print("3. Delete Task")
-    print("4. Exit")
+    print("4. Clear All Tasks")
+    print("5. Exit")
 
 while True:
     show_menu()
@@ -31,10 +33,10 @@ while True:
         else:
             print("Invalid task number.")
     elif choice == '4':
-        with open("tasks.txt", "w") as file:
-    for task in tasks:
-        file.write(task + "\n")
-
+        tasks.clear()
+        print("All tasks cleared.")
+    elif choice == '5':
         break
+
     else:
         print("Invalid choice.")
