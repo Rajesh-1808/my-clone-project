@@ -40,3 +40,4 @@ while True:
 
     else:
         print("Invalid choice.")
+print('Hello from me\!')
